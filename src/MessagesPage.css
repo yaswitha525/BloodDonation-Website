@@ -1,0 +1,410 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  /* WhatsApp-style Messages Page Layout with Blood Donation theme */
+  .messages-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #f8f8f8;
+    overflow: hidden;
+  }
+  
+  /* Sidebar with contacts */
+  .messages-sidebar {
+    width: 30%;
+    min-width: 320px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .messages-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #d32f2f; /* Blood red theme */
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .home-link {
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .home-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .messages-search {
+    padding: 8px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #f5f5f5;
+  }
+  
+  .messages-search input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    font-size: 14px;
+  }
+  
+  .messages-list {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .contact-item {
+    display: flex;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s;
+  }
+  
+  .contact-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .contact-item.selected {
+    background-color: #f1f1f1;
+    border-left: 4px solid #d32f2f; /* Blood red theme */
+  }
+  
+  .contact-item.unread {
+    background-color: #fff1f1; /* Light red for unread */
+  }
+  
+  .contact-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #d32f2f; /* Blood red theme */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .contact-details {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .contact-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .contact-header h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .contact-time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .contact-message {
+    font-size: 14px;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .unread-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d32f2f; /* Blood red theme */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px;
+  }
+  
+  /* Chat area */
+  .chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .chat-header {
+    background-color: #f0f0f0;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-contact-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 2px 0;
+  }
+  
+  .contact-status {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    margin-bottom: 12px;
+    max-width: 70%;
+    align-self: flex-start;
+    animation: fadeIn 0.3s;
+  }
+  
+  .message.sent {
+    align-self: flex-end;
+  }
+  
+  .message-bubble {
+    padding: 10px 14px;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .message.received .message-bubble {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-top-left-radius: 4px;
+  }
+  
+  .message.sent .message-bubble {
+    background-color: #ffebee; /* Light red background for sent messages */
+    border-top-right-radius: 4px;
+    color: #333;
+  }
+  
+  .message-bubble p {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  
+  .message-time {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 11px;
+    color: #999;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .chat-input textarea {
+    flex: 1;
+    min-height: 40px;
+    max-height: 100px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  .send-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #d32f2f; /* Blood red theme */
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .send-button:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+  }
+  
+  .send-button:disabled {
+    background-color: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+  }
+  
+  /* When no chat is selected */
+  .no-chat-selected {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #999;
+  }
+  
+  .no-chat-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .no-chat-content svg {
+    color: #d32f2f; /* Blood red theme */
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+  
+  .no-chat-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .no-chat-content p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Animation for message appearance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .messages-container {
+      flex-direction: column;
+    }
+    
+    .messages-sidebar {
+      width: 100%;
+      min-width: 100%;
+      max-height: 40vh;
+    }
+    
+    .message {
+      max-width: 85%; 
+    }
+  }
+  
+  /* Styles for the blood donation theme elements */
+  .blood-type-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .urgent-request {
+    color: #d32f2f;
+    font-weight: bold;
+  }
+  
+  .donation-status {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  
+  .donation-status.completed {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+  }
+  
+  .donation-status.pending {
+    background-color: #ffecb3;
+    color: #ff8f00;
+  }
+  
+  /* Custom scrollbar for better UI */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #d32f2f40; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d32f2f80; 
+  }

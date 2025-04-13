@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Font & Base */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #d32f2f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcccc;
+  }
+  
+  .profile-section .icon-link {
+    color: white;
+    margin-left: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .profile-section .icon-link:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Content Sections */
+  .content section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 16px rgba(211, 47, 47, 0.1);
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  .content h2 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .content p, .content li {
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* List Styling */
+  .content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    } 
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .nav-links {
+      margin-bottom: 1rem;
+    }
+  
+    .nav-links a {
+      margin: 0 0.5rem 0.5rem 0;
+    }
+  
+    .content section {
+      padding: 1.5rem;
+    }
+  
+    .content h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

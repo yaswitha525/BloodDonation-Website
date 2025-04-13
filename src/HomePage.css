@@ -1,0 +1,88 @@
+/* HomePage.css */
+
+.homepage-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(120deg, #ffe5e5, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  position: relative;
+}
+
+.homepage-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #d32f2f;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.illustration {
+  width: 250px;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.homepage-buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+
+.homepage-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #d32f2f;
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.2rem 2rem;
+  min-width: 180px;
+  color: #d32f2f;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.homepage-button:hover {
+  background-color: #d32f2f;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(211, 47, 47, 0.3);
+}
+
+.blood-drop-bg {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  height: 300px;
+  width: 300px;
+  background: #d32f2f;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .homepage-title {
+    font-size: 2.5rem;
+  }
+
+  .homepage-button {
+    min-width: 150px;
+    font-size: 1rem;
+  }
+
+  .illustration {
+    width: 180px;
+  }
+}

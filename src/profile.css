@@ -1,0 +1,150 @@
+/* profile.css */
+
+body {
+    background-color: #fff8f8;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .profile-page {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #d32f2f;
+    margin-top: 4rem;
+  }
+  
+  /* Profile Card */
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-avatar {
+    background-color: #d32f2f;
+    color: white;
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .profile-card p {
+    font-size: 1.05rem;
+    margin: 0.3rem 0;
+    color: #444;
+  }
+  
+  /* History Section */
+  .past-history {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  
+  .history-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .history-box {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .history-box:hover {
+    transform: translateY(-3px);
+  }
+  
+  .history-box h3 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+  }
+  
+  .history-item {
+    margin-bottom: 1rem;
+    background-color: #fcebea;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .history-item p {
+    margin: 0.3rem 0;
+    color: #333;
+  }
+  
+  /* Buttons */
+  .profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  
+  .button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #d32f2f;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .profile-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .button {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  

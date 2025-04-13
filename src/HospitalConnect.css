@@ -1,0 +1,131 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d9534f;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-group select:focus {
+  border-color: red;
+}
+
+/* Find Button */
+.find-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.find-button:hover {
+  background: darkred;
+}
+
+/* Results Section */
+.results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.results h3 {
+  font-size: 20px;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
+
+/* Hospital Cards */
+.hospital-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.hospital-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-card h4 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.hospital-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Contact Button */
+.contact-button {
+  background: #5bc0de;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background: #31b0d5;
+}

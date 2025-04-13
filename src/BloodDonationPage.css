@@ -1,0 +1,127 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff5f5;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #d32f2f;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcdd2;
+  }
+  
+  .profile-section .icon-link {
+    margin-left: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-section .icon-link:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Content */
+  .content {
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Sections */
+  section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  h2 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: #444;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+    color: #444;
+  }
+  
+  ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 1rem;
+  }
+  
+  ul li::before {
+    content: "❤️";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1rem;
+    color: #d32f2f;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .content {
+      padding: 1rem;
+    }
+  
+    .nav-links a {
+      margin-right: 10px;
+      font-size: 0.95rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    ul li {
+      font-size: 1rem;
+    }
+  }
+  

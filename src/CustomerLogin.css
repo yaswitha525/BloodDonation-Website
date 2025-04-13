@@ -1,0 +1,77 @@
+/* CustomerLogin.css */
+
+.customer-login-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ffe5e5, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.customer-login-box {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(211, 47, 47, 0.25);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.customer-login-box h2 {
+  font-size: 2rem;
+  color: #d32f2f;
+  margin-bottom: 1.5rem;
+}
+
+.customer-login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.customer-login-box input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.customer-login-box input:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.15);
+}
+
+.customer-login-box button {
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.customer-login-box button:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .customer-login-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .customer-login-box h2 {
+    font-size: 1.7rem;
+  }
+}
